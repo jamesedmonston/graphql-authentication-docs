@@ -34,7 +34,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve("./sidebar.js"),
           editUrl:
-            "https://github.com/jamesedmonston/graphql-authentication-docs",
+            "https://github.com/jamesedmonston/graphql-authentication-docs/edit/master/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
