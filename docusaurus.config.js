@@ -13,7 +13,7 @@ module.exports = {
       title: "GraphQL Authentication",
       items: [
         {
-          to: "/",
+          to: "/docs",
           label: "Docs",
         },
         {

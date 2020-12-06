@@ -11,7 +11,7 @@ Non-JWT tokens are now deprecated and will be removed in version `1.4.0`. JWTs o
 
 ## JWT Expiration
 
-The length of time before JWTs expire. Generally you should keep this short (< 30 minutes) and use the [`refreshToken`](/docs/mutations#refreshToken) mutation to get a new JWT.
+The length of time before JWTs expire. Generally you should keep this short (< 30 minutes) and use the [`refreshToken`](/docs/usage/authentication#refresh-jwt) mutation to get a new JWT.
 
 Possible values are:
 
