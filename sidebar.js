@@ -15,6 +15,7 @@ module.exports = {
       "usage/signing-requests",
       "usage/user-details",
       "usage/social",
+      "usage/modifying-jwts",
     ],
     Extra: ["extra/fyi"],
   },

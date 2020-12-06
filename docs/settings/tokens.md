@@ -6,7 +6,7 @@ slug: /settings/tokens
 ---
 
 :::warning
-Non-JWT tokens are now deprecated and will be removed in version `1.4.0`. JWTs offer [greater flexibility and security](/docs/modifying-jwts).
+Non-JWT tokens are now deprecated and will be removed in version `1.4.0`. JWTs offer [greater flexibility and security](/docs/usage/modifying-jwts).
 :::
 
 ## JWT Expiration
