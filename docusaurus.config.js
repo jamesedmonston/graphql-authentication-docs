@@ -1,7 +1,7 @@
 module.exports = {
   title: "GraphQL Authentication",
   tagline: "GraphQL authentication for your headless Craft CMS applications.",
-  url: "https://jamesedmonston.co.uk/graphql-authentication",
+  url: "https://graphql-authentication.jamesedmonston.co.uk",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
