@@ -15,7 +15,7 @@ If you choose `Multiple Schemas`, you will see the following fields **_for each 
 
 ## GraphQL Schema
 
-The schema that tokens will be assigned to through the [authentication mutations](/docs/usage/authentication).
+The schema that tokens will be assigned to through the [authentication mutations](/usage/authentication).
 
 ## Allow Registration
 

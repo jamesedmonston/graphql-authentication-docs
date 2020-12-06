@@ -6,12 +6,12 @@ slug: /settings/tokens
 ---
 
 :::warning
-Non-JWT tokens are now deprecated and will be removed in version `1.4.0`. JWTs offer [greater flexibility and security](/docs/usage/modifying-jwts).
+Non-JWT tokens are now deprecated and will be removed in version `1.4.0`. JWTs offer [greater flexibility and security](/usage/modifying-jwts).
 :::
 
 ## JWT Expiration
 
-The length of time before JWTs expire. Generally you should keep this short (< 30 minutes) and use the [`refreshToken`](/docs/usage/authentication#refresh-jwt) mutation to get a new JWT.
+The length of time before JWTs expire. Generally you should keep this short (< 30 minutes) and use the [`refreshToken`](/usage/authentication#refresh-jwt) mutation to get a new JWT.
 
 Possible values are:
 

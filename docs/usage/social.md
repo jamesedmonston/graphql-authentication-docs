@@ -65,7 +65,7 @@ query {
 }
 ```
 
-Next, send the user to the generated URL and they will be asked to authenticate through Facebook. Once they have authenticated, they will be redirected to your [Redirect URL](/docs/settings/social#redirect-url) with a `code` query parameter (e.g. `https://yoursite.com/facebook?code=...`).
+Next, send the user to the generated URL and they will be asked to authenticate through Facebook. Once they have authenticated, they will be redirected to your [Redirect URL](/settings/social#redirect-url) with a `code` query parameter (e.g. `https://yoursite.com/facebook?code=...`).
 
 Finally, once you've grabbed the `code` from the URL, you can call the `facebookSignIn` mutation:
 
@@ -125,7 +125,7 @@ query {
 }
 ```
 
-Next, send the user to the generated URL and they will be asked to authenticate through Twitter. Once they have authenticated, they will be redirected to your [Redirect URL](/docs/settings/social#redirect-url-1) with `oauthToken` and `oauthVerifier` query parameters (e.g. `https://yoursite.com/twitter?oauthToken=...&oauthVerifier=...`).
+Next, send the user to the generated URL and they will be asked to authenticate through Twitter. Once they have authenticated, they will be redirected to your [Redirect URL](/settings/social#redirect-url-1) with `oauthToken` and `oauthVerifier` query parameters (e.g. `https://yoursite.com/twitter?oauthToken=...&oauthVerifier=...`).
 
 Finally, once you've grabbed `oauthToken` and `oauthVerifier` from the URL, you can call the `twitterSignIn` mutation:
 
