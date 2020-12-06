@@ -5,7 +5,7 @@ module.exports = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "assets/favicon.ico",
   organizationName: "jamesedmonston",
   projectName: "graphql-authentication-docs",
   themeConfig: {
