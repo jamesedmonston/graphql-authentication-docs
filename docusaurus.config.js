@@ -1,7 +1,7 @@
 module.exports = {
   title: "GraphQL Authentication",
   tagline: "GraphQL authentication for your headless Craft CMS applications.",
-  url: "https://docs.jamesedmonston.co.uk/graphql-authentication",
+  url: "https://jamesedmonston.co.uk/graphql-authentication",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -13,7 +13,7 @@ module.exports = {
       title: "GraphQL Authentication",
       items: [
         {
-          to: "/docs",
+          to: "/",
           label: "Docs",
         },
         {
@@ -35,6 +35,7 @@ module.exports = {
           sidebarPath: require.resolve("./sidebar.js"),
           editUrl:
             "https://github.com/jamesedmonston/graphql-authentication-docs/edit/master/",
+          routeBasePath: "/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
