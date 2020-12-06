@@ -14,6 +14,7 @@ module.exports = {
       "usage/authentication",
       "usage/signing-requests",
       "usage/user-details",
+      "usage/social",
     ],
     Extra: ["extra/fyi"],
   },
