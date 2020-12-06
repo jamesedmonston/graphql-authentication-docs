@@ -39,7 +39,7 @@ The key that is used to sign the JWT at generation and validation time. This def
 
 ## SameSite Cookie Policy
 
-The `SameSite` cookie policy to use for the `HTTPOnly` refresh token cookie that is automatically sent with the authentication mutations.
+The `SameSite` cookie policy to use for the `HttpOnly` refresh token cookie that is automatically sent with the authentication mutations.
 
 Possible values are:
 

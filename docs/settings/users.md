@@ -21,7 +21,7 @@ The schema that tokens will be assigned to through the [authentication mutations
 
 Choose if the registration mutations should be available.
 
-If you chose `Single Schemas` for the `Permission Type` field, you will have a single `register` mutation available.
+If you choose `Single Schemas` for the `Permission Type` field, you will have a single `register` mutation available.
 
 Otherwise, you will have a mutation for each user group with registration enabled – with the group handle appended to the mutation name, for example `registerUser` and `registerBusiness`.
 

@@ -10,7 +10,7 @@ slug: /usage/authentication
 To log in to a user, you can call the `authenticate` mutation:
 
 :::note
-Whilst the `refreshToken` is available in the mutation response, this is mainly intended for use in environments where cookies aren't available (i.e. mobile applications). An `HTTPOnly` refresh token cookie is automatically sent with all authentication mutation responses.
+Whilst the `refreshToken` is available in the mutation response, this is mainly intended for use in environments where cookies aren't available (i.e. mobile applications). An `HttpOnly` refresh token cookie is automatically sent with all authentication mutation responses.
 :::
 
 ```javascript
@@ -101,7 +101,7 @@ Whilst this mutation accepts a `refreshToken` argument, browser requests will au
 :::
 
 :::note
-Refresh tokens are consumed when generating a new JWT. A new refresh token is included in the mutation response, and also sent as an `HTTPOnly` cookie.
+Refresh tokens are consumed when generating a new JWT. A new refresh token is included in the mutation response, and also sent as an `HttpOnly` cookie.
 :::
 
 ```javascript
