@@ -65,9 +65,9 @@ mutation {
     // also supports custom fields
   ) {
     jwt
-    jwtExpiration
+    jwtExpiresAt
     refreshToken
-    refreshTokenExpiration
+    refreshTokenExpiresAt
     user {
       id
       fullName
