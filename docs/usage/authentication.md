@@ -20,9 +20,9 @@ mutation {
     password: "testing123"
   ) {
     jwt
-    jwtExpiration
+    jwtExpiresAt
     refreshToken
-    refreshTokenExpiration
+    refreshTokenExpiresAt
     user {
       id
       fullName
