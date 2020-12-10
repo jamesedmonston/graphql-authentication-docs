@@ -5,7 +5,7 @@ sidebar_label: User Details
 slug: /usage/user-details
 ---
 
-## Get User
+## Viewer
 
 To get the authenticated user's data, you can call the `viewer` query:
 
@@ -28,7 +28,7 @@ query {
 }
 ```
 
-## Update User
+## Update Viewer
 
 To update the authenticated user, you can call the `updateViewer` mutation:
 
