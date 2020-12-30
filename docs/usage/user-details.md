@@ -5,17 +5,13 @@ sidebar_label: User Details
 slug: /usage/user-details
 ---
 
-## Get User
+## Viewer
 
-To get the authenticated user's data, you can call the `getUser` query:
-
-:::note
-This may be deprecated and renamed to `viewer` in a future release.
-:::
+To get the authenticated user's data, you can call the `viewer` query:
 
 ```javascript
 query {
-  getUser {
+  viewer {
     id
     fullName
   }
@@ -24,7 +20,7 @@ query {
 // returns
 {
   "data": {
-    "getUser": {
+    "viewer": {
       "id": "21",
       "fullName": "James Edmonston"
     }
@@ -32,20 +28,16 @@ query {
 }
 ```
 
-## Update User
+## Update Viewer
 
-To update the authenticated user, you can call the `updateUser` mutation:
-
-:::note
-This may be deprecated and renamed to `updateViewer` in a future release.
-:::
+To update the authenticated user, you can call the `updateViewer` mutation:
 
 ```javascript
 mutation {
-  updateUser(
+  updateViewer (
     firstName: "Jerry"
     lastName: "Jackson"
-    // also supports custom fields
+    # also supports custom fields
   ) {
     id
     fullName
@@ -55,7 +47,7 @@ mutation {
 // returns
 {
   "data": {
-    "updateUser": {
+    "updateViewer": {
       "id": "21",
       "fullName": "Jerry Jackson"
     }
