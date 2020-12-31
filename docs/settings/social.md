@@ -75,7 +75,7 @@ E.g. `com.yourcompany.yourapp.client`
 
 ### App Client Secret
 
-The App Client Secret from your Twitter app.
+The App Client Secret from your Apple app.
 
 E.g. `eyJraWQiOiJRVzdaUjk3WDk1IiwiYWxnIjoiRVMyNTYifQ...`
 

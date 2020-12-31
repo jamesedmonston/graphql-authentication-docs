@@ -222,7 +222,7 @@ mutation {
 // returns
 {
   "data": {
-    "twitterSignIn": {
+    "appleSignIn": {
       "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJDcmFmdENNUyIsImlhdCI6MTYwNzIyMjg5MywiZXhwIjoxNjA3MjI0NjkzLCJzdWIiOi...",
       "jwtExpiresAt": 1607224693,
       "refreshToken": "eu5l-FkvTaWEzIt38QFR8ETx5PIS706P",
