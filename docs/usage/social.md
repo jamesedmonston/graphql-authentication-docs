@@ -170,3 +170,68 @@ mutation {
   }
 }
 ```
+
+## Apple
+
+To authenticate a user through Sign in with Apple, you first need to call the `appleOauthUrl` query:
+
+```javascript
+query {
+  appleOauthUrl
+}
+
+// returns
+{
+  "data": {
+    "appleOauthUrl": "https://appleid.apple.com/auth/authorize?..."
+  }
+}
+```
+
+Next, send the user to the generated URL and they will be asked to authenticate through Apple. Once they have authenticated, they will be redirected to your [Redirect URL](/settings/social#redirect-url-2) with `code` and `state` POST parameters.
+
+Due to Apple sending the fields as POST parameters, you'll need to add an intermediate route that grabs them (e.g. a [Next.js API route](https://nextjs.org/docs/api-routes/introduction)), and redirects to your front-end.
+
+Finally, once you've grabbed `code` and `state`, you can call the `appleSignIn` mutation:
+
+:::note
+The `appleSignIn` mutation both authenticates _and_ registers users. It will throw a `Cannot find matching user` error if registration is disabled, and no user with that email exists.
+:::
+
+:::note
+If you have `Permission Type` set to `Multiple Schemas` in your plugin settings, you will have a `appleSignIn` mutation for each user group that has registrations enabled (e.g. `appleSignInUser` and `appleSignInBusiness`).
+:::
+
+```javascript
+mutation {
+  appleSignIn(
+    code: "..."
+    state: "..."
+  ) {
+    jwt
+    jwtExpiresAt
+    refreshToken
+    refreshTokenExpiresAt
+    user {
+      id
+      fullName
+    }
+  }
+}
+
+// returns
+{
+  "data": {
+    "twitterSignIn": {
+      "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJDcmFmdENNUyIsImlhdCI6MTYwNzIyMjg5MywiZXhwIjoxNjA3MjI0NjkzLCJzdWIiOi...",
+      "jwtExpiresAt": 1607224693,
+      "refreshToken": "eu5l-FkvTaWEzIt38QFR8ETx5PIS706P",
+      "refreshTokenExpiresAt": 1614998893,
+      "user": {
+        "id": "21",
+        "fullName": "James Edmonston"
+      }
+    }
+  }
+}
+```

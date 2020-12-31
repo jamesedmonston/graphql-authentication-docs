@@ -67,4 +67,20 @@ The email domains from which you'd like to allow Log in with Twitter. Comma-deli
 
 ## Apple
 
-Coming soon!
+### App Client ID
+
+The App Client ID from your Apple app.
+
+E.g. `com.yourcompany.yourapp.client`
+
+### App Client Secret
+
+The App Client Secret from your Twitter app.
+
+E.g. `eyJraWQiOiJRVzdaUjk3WDk1IiwiYWxnIjoiRVMyNTYifQ...`
+
+### Redirect URL
+
+The URL to redirect to after authenticating.
+
+E.g. `https://yoursite.com/apple`
