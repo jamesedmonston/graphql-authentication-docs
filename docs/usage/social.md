@@ -190,7 +190,7 @@ query {
 
 Next, send the user to the generated URL and they will be asked to authenticate through Apple. Once they have authenticated, they will be redirected to your [Redirect URL](/settings/social#redirect-url-2) with `code` and `state` POST parameters.
 
-Due to Apple sending the fields as POST parameters, you'll need to add an intermediate route that grabs them (e.g. a [Next.js API route](https://nextjs.org/docs/api-routes/introduction)), and redirects to your front-end.
+Due to Apple sending the fields as POST parameters, you'll need to add an intermediary route that grabs them (e.g. a [Next.js API route](https://nextjs.org/docs/api-routes/introduction)), and redirects to your front-end.
 
 Finally, once you've grabbed `code` and `state`, you can call the `appleSignIn` mutation:
 
