@@ -14,7 +14,7 @@ The `googleSignIn` mutation both authenticates _and_ registers users. It will th
 :::
 
 :::note
-If you have `Permission Type` set to `Multiple Schemas` in your plugin settings, you will have a `googleSignIn` mutation for each user group that has registrations enabled (e.g. `googleSignInUser` and `googleSignInBusiness`).
+If you have `Permission Type` set to `Multiple Schemas` in your plugin settings, you will have a `googleSignIn` mutation for each user group (e.g. `googleSignInUser` and `googleSignInBusiness`).
 :::
 
 ```javascript
@@ -74,7 +74,7 @@ The `facebookSignIn` mutation both authenticates _and_ registers users. It will 
 :::
 
 :::note
-If you have `Permission Type` set to `Multiple Schemas` in your plugin settings, you will have a `facebookSignIn` mutation for each user group that has registrations enabled (e.g. `facebookSignInUser` and `facebookSignInBusiness`).
+If you have `Permission Type` set to `Multiple Schemas` in your plugin settings, you will have a `facebookSignIn` mutation for each user group (e.g. `facebookSignInUser` and `facebookSignInBusiness`).
 :::
 
 ```javascript
@@ -134,7 +134,7 @@ The `twitterSignIn` mutation both authenticates _and_ registers users. It will t
 :::
 
 :::note
-If you have `Permission Type` set to `Multiple Schemas` in your plugin settings, you will have a `twitterSignIn` mutation for each user group that has registrations enabled (e.g. `twitterSignInUser` and `twitterSignInBusiness`).
+If you have `Permission Type` set to `Multiple Schemas` in your plugin settings, you will have a `twitterSignIn` mutation for each user group (e.g. `twitterSignInUser` and `twitterSignInBusiness`).
 :::
 
 ```javascript
@@ -190,7 +190,7 @@ query {
 
 Next, send the user to the generated URL and they will be asked to authenticate through Apple. Once they have authenticated, they will be redirected to your [Redirect URL](/settings/social#redirect-url-2) with `code` and `state` POST parameters.
 
-Due to Apple sending the fields as POST parameters, you'll need to add an intermediate route that grabs them (e.g. a [Next.js API route](https://nextjs.org/docs/api-routes/introduction)), and redirects to your front-end.
+Due to Apple sending the fields as POST parameters, you'll need to add an intermediary route that grabs them (e.g. a [Next.js API route](https://nextjs.org/docs/api-routes/introduction)), and redirects to your front-end.
 
 Finally, once you've grabbed `code` and `state`, you can call the `appleSignIn` mutation:
 
@@ -199,7 +199,7 @@ The `appleSignIn` mutation both authenticates _and_ registers users. It will thr
 :::
 
 :::note
-If you have `Permission Type` set to `Multiple Schemas` in your plugin settings, you will have a `appleSignIn` mutation for each user group that has registrations enabled (e.g. `appleSignInUser` and `appleSignInBusiness`).
+If you have `Permission Type` set to `Multiple Schemas` in your plugin settings, you will have a `appleSignIn` mutation for each user group (e.g. `appleSignInUser` and `appleSignInBusiness`).
 :::
 
 ```javascript
