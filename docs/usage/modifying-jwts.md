@@ -60,7 +60,7 @@ class ModifyJwt extends Plugin
 }
 ```
 
-The payloads would now be as follows:
+The payload would now be as follows:
 
 ```json
 {
