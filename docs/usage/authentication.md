@@ -62,7 +62,7 @@ mutation {
     password: "testing123"
     firstName: "James"
     lastName: "Edmonston"
-    // also supports custom fields
+    customField: "A value"
   ) {
     jwt
     jwtExpiresAt
@@ -71,6 +71,9 @@ mutation {
     user {
       id
       fullName
+      ... on User {
+        customField
+      }
     }
   }
 }
@@ -85,7 +88,8 @@ mutation {
       "refreshTokenExpiresAt": 1614998893,
       "user": {
         "id": "21",
-        "fullName": "James Edmonston"
+        "fullName": "James Edmonston",
+        "customField": "A value"
       }
     }
   }

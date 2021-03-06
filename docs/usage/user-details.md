@@ -37,10 +37,13 @@ mutation {
   updateViewer (
     firstName: "Jerry"
     lastName: "Jackson"
-    # also supports custom fields
+    customField: "A value"
   ) {
     id
     fullName
+    ... on User {
+      customField
+    }
   }
 }
 
@@ -49,7 +52,8 @@ mutation {
   "data": {
     "updateViewer": {
       "id": "21",
-      "fullName": "Jerry Jackson"
+      "fullName": "Jerry Jackson",
+      "customField": "A value"
     }
   }
 }
