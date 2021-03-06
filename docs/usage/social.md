@@ -18,7 +18,7 @@ If you have `Permission Type` set to `Multiple Schemas` in your plugin settings,
 :::
 
 ```javascript
-mutation {
+mutation GoogleSignIn {
   googleSignIn(idToken: "...") {
     jwt
     jwtExpiresAt
@@ -53,7 +53,7 @@ mutation {
 To authenticate a user through Facebook Login, you first need to call the `facebookOauthUrl` query:
 
 ```javascript
-query {
+query FacebookOauthUrl {
   facebookOauthUrl
 }
 
@@ -78,7 +78,7 @@ If you have `Permission Type` set to `Multiple Schemas` in your plugin settings,
 :::
 
 ```javascript
-mutation {
+mutation FacebookSignIn {
   facebookSignIn(code: "...") {
     jwt
     jwtExpiresAt
@@ -113,7 +113,7 @@ mutation {
 To authenticate a user through Log in with Twitter, you first need to call the `twitterOauthUrl` query:
 
 ```javascript
-query {
+query TwitterOauthUrl {
   twitterOauthUrl
 }
 
@@ -138,7 +138,7 @@ If you have `Permission Type` set to `Multiple Schemas` in your plugin settings,
 :::
 
 ```javascript
-mutation {
+mutation TwitterSignIn {
   twitterSignIn(
     oauthToken: "..."
     oauthVerifier: "..."
@@ -176,7 +176,7 @@ mutation {
 To authenticate a user through Sign in with Apple, you first need to call the `appleOauthUrl` query:
 
 ```javascript
-query {
+query AppleOauthUrl {
   appleOauthUrl
 }
 
@@ -203,7 +203,7 @@ If you have `Permission Type` set to `Multiple Schemas` in your plugin settings,
 :::
 
 ```javascript
-mutation {
+mutation AppleSignIn {
   appleSignIn(
     code: "..."
     state: "..."

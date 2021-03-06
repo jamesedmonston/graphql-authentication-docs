@@ -10,7 +10,7 @@ slug: /usage/user-details
 To get the authenticated user's data, you can call the `viewer` query:
 
 ```javascript
-query {
+query Viewer {
   viewer {
     id
     fullName
@@ -33,7 +33,7 @@ query {
 To update the authenticated user, you can call the `updateViewer` mutation:
 
 ```javascript
-mutation {
+mutation UpdateViewer {
   updateViewer (
     firstName: "Jerry"
     lastName: "Jackson"
@@ -64,7 +64,7 @@ mutation {
 To update the authenticated user's password, you can call the `updatePassword` mutation:
 
 ```javascript
-mutation {
+mutation UpdatePassword {
   updatePassword(
     currentPassword: "testing123"
     newPassword: "testing1234"

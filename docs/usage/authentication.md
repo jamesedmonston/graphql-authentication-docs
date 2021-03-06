@@ -14,7 +14,7 @@ Whilst the `refreshToken` is available in the mutation response, this is mainly 
 :::
 
 ```javascript
-mutation {
+mutation Authenticate {
   authenticate(
     email: "james@testingthings.com"
     password: "testing123"
@@ -56,7 +56,7 @@ If you have `Permission Type` set to `Multiple Schemas` in your plugin settings,
 :::
 
 ```javascript
-mutation {
+mutation Register {
   register(
     email: "james@testingthings.com"
     password: "testing123"
@@ -109,7 +109,7 @@ Refresh tokens are consumed when generating a new JWT. A new refresh token is in
 :::
 
 ```javascript
-mutation {
+mutation RefreshToken {
   refreshToken(refreshToken: "Bc7xqt6ri5vFEzIEXRo-Z0CxgG0RqF_L") {
     jwt
     jwtExpiresAt
@@ -138,7 +138,7 @@ mutation {
 To delete the current token, you can call the `deleteCurrentToken` mutation:
 
 ```javascript
-mutation {
+mutation DeleteCurrentToken {
   deleteCurrentToken
 }
 
@@ -155,7 +155,7 @@ mutation {
 To delete all tokens associated with a user, you can call the `deleteAllTokens` mutation:
 
 ```javascript
-mutation {
+mutation DeleteAllTokens {
   deleteAllTokens
 }
 
@@ -172,7 +172,7 @@ mutation {
 To send a password reset email to a user, you can call the `forgottenPassword` mutation:
 
 ```javascript
-mutation {
+mutation ForgottenPassword {
   forgottenPassword(email: "james@testingthings.com")
 }
 
@@ -189,7 +189,7 @@ mutation {
 To set a user's password following a password reset email, you can call the `setPassword` mutation:
 
 ```javascript
-mutation {
+mutation SetPassword {
   setPassword(
     password: "testing1234"
     code: "aY6MHG5NhKvA5tzrxKXuAvOLKca3fjJQ" // `code` query param from reset password email
