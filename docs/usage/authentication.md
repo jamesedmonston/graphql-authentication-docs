@@ -167,6 +167,28 @@ mutation DeleteAllTokens {
 }
 ```
 
+## Activate User
+
+To activate a user following an activation email, you first need to grab the `code` and `id` query parameters from the URL in the email.
+
+Once you've grabbed these, you can call the `activateUser` mutation:
+
+```javascript
+mutation ActivateUser {
+  activateUser(
+    code: "aY6MHG5NhKvA5tzrxKXuAvOLKca3fjJQ"
+    id: "b50acbd9-c905-477a-a3f5-d0972a5a4356"
+  )
+}
+
+// returns
+{
+  "data": {
+    "setPassword": "Successfully activated user"
+  }
+}
+```
+
 ## Forgotten Password
 
 To send a password reset email to a user, you can call the `forgottenPassword` mutation:
@@ -186,14 +208,16 @@ mutation ForgottenPassword {
 
 ## Set Password
 
-To set a user's password following a password reset email, you can call the `setPassword` mutation:
+To set a user's password following a password reset email, you first need to grab the `code` and `id` query parameters from the URL in the email.
+
+Once you've grabbed these, you can call the `setPassword` mutation:
 
 ```javascript
 mutation SetPassword {
   setPassword(
     password: "testing1234"
-    code: "aY6MHG5NhKvA5tzrxKXuAvOLKca3fjJQ" // `code` query param from reset password email
-    id: "b50acbd9-c905-477a-a3f5-d0972a5a4356" // `id` query param from reset password email
+    code: "aY6MHG5NhKvA5tzrxKXuAvOLKca3fjJQ"
+    id: "b50acbd9-c905-477a-a3f5-d0972a5a4356"
   )
 }
 
