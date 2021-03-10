@@ -7,7 +7,7 @@ slug: /usage/signing-requests
 
 Once you've authenticated a user and have the JWT to hand, you're ready to start signing your requests.
 
-JWT tokens currently need to be passed into the `Authorization` header as follows:
+JWTs currently need to be passed into the `Authorization` header as follows:
 
 `Authorization: JWT ${token}`
 
