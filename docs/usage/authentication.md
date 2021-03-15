@@ -184,7 +184,7 @@ mutation ActivateUser {
 // returns
 {
   "data": {
-    "setPassword": "Successfully activated user"
+    "activateUser": "Successfully activated user"
   }
 }
 ```
@@ -194,17 +194,14 @@ mutation ActivateUser {
 To resend an activation email to a user, you can call the `resendActivation` mutation:
 
 ```javascript
-mutation ActivateUser {
-  activateUser(
-    code: "aY6MHG5NhKvA5tzrxKXuAvOLKca3fjJQ"
-    id: "b50acbd9-c905-477a-a3f5-d0972a5a4356"
-  )
+mutation ResendActivation {
+  resendActivation(email: "james@testingthings.com")
 }
 
 // returns
 {
   "data": {
-    "setPassword": "Successfully activated user"
+    "resendActivation": "You will receive an email if it matches an account in our system"
   }
 }
 ```
