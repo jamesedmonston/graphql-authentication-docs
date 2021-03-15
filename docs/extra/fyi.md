@@ -15,7 +15,7 @@ Because of this, the `authenticate` mutation temporarily grants control panel ac
 
 The logic should run _very_ quickly, so users shouldn't ever _actually_ be able to access the control panel, but it's something to be aware of in case you want to implement additional back-end logic, if users _shouldn't_ have access.
 
-The following snippet is how we grant temporary access:
+The following snippet is how temporary access is granted:
 
 ```php
 $userPermissions = $permissions->getPermissionsByUserId($user->id);
