@@ -189,6 +189,26 @@ mutation ActivateUser {
 }
 ```
 
+## Resend Activation Email
+
+To resend an activation email to a user, you can call the `resendActivation` mutation:
+
+```javascript
+mutation ActivateUser {
+  activateUser(
+    code: "aY6MHG5NhKvA5tzrxKXuAvOLKca3fjJQ"
+    id: "b50acbd9-c905-477a-a3f5-d0972a5a4356"
+  )
+}
+
+// returns
+{
+  "data": {
+    "setPassword": "Successfully activated user"
+  }
+}
+```
+
 ## Forgotten Password
 
 To send a password reset email to a user, you can call the `forgottenPassword` mutation:
