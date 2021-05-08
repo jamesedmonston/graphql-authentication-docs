@@ -5,7 +5,24 @@ sidebar_label: FYI
 slug: /extra/fyi
 ---
 
-## Things you should be aware of
+### `entry` and `asset` queries
+
+Queries without a `section`/`sectionId` or `volume`/`volumeId` argument are automatically restricted to the current user's entries/assets. This acts as a security fallback, and also to keep pagination working correctly.
+
+The inclusion of a section or volume argument means the query can be checked against permissions ahead of time.
+
+Take the following query for example:
+
+```
+query Entries {
+    entries(limit: 5) {
+        id
+        title
+    }
+}
+```
+
+If private entries were removed _after_ the query had been fired, you could end up with fewer results than requested.
 
 ### `authenticate` mutation
 
