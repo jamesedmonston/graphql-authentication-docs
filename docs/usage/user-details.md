@@ -38,14 +38,24 @@ mutation UpdateViewer {
     firstName: "Jerry"
     lastName: "Jackson"
     customField: "A value"
+    photo: {
+      fileData: "base64..."
+      filename: "avatar.jpg"
+    }
   ) {
     id
     fullName
     ... on User {
       customField
+      photo {
+        id
+        url
+      }
     }
   }
 }
+
+// sending `photo` as `null` will remove the user's avatar
 
 // returns
 {
@@ -53,7 +63,11 @@ mutation UpdateViewer {
     "updateViewer": {
       "id": "21",
       "fullName": "Jerry Jackson",
-      "customField": "A value"
+      "customField": "A value",
+      "photo": {
+        "id": "123",
+        "url": "https://plugins.localhost/uploads/avatar.jpg"
+      }
     }
   }
 }
