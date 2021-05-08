@@ -131,38 +131,46 @@ mutation RefreshToken {
 }
 ```
 
-## Log out
+## Delete refresh tokens
 
-### Log out of current device
+:::note
+As of version `1.9.0` the plugin no longer generates Craft GraphQL tokens, so the `deleteCurrentToken` and `deleteAllTokens` mutations were removed.
+:::
 
-To delete the current token, you can call the `deleteCurrentToken` mutation:
+### Delete current refresh token
+
+To delete the current refresh token, you can call the `deleteRefreshToken` mutation:
+
+:::note
+Whilst this mutation accepts a `refreshToken` argument, browser requests will automatically use the refresh token cookie. The argument is mainly intended for use in mobile applications.
+:::
 
 ```javascript
-mutation DeleteCurrentToken {
-  deleteCurrentToken
+mutation DeleteRefreshToken {
+  deleteRefreshToken(refreshToken: "Bc7xqt6ri5vFEzIEXRo-Z0CxgG0RqF_L")
 }
 
 // returns
 {
   "data": {
-    "deleteCurrentToken": true
+    "deleteRefreshToken": true
   }
 }
 ```
 
-### Log out of all devices
+### Delete all refresh tokens
 
-To delete all tokens associated with a user, you can call the `deleteAllTokens` mutation:
+To delete all refresh tokens associated with a user, you can call the `deleteRefreshTokens` mutation:
 
 ```javascript
-mutation DeleteAllTokens {
-  deleteAllTokens
+mutation DeleteRefreshTokens {
+  deleteRefreshTokens
 }
 
 // returns
 {
   "data": {
-    "deleteAllTokens": true
+    "deleteRefreshTokens": true
   }
 }
 ```
