@@ -7,6 +7,7 @@ module.exports = {
     Settings: [
       "settings/users",
       "settings/tokens",
+      "settings/fields",
       "settings/social",
       "settings/messages",
     ],
