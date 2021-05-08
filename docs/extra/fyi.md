@@ -13,7 +13,7 @@ The inclusion of a section or volume argument means the query can be checked aga
 
 Take the following query for example:
 
-```
+```javascript
 query Entries {
     entries(limit: 5) {
         id
