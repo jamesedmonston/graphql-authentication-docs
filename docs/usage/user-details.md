@@ -45,12 +45,12 @@ mutation UpdateViewer {
   ) {
     id
     fullName
+    photo {
+      id
+      url
+    }
     ... on User {
       customField
-      photo {
-        id
-        url
-      }
     }
   }
 }
