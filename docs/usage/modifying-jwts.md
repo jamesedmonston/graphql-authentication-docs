@@ -19,8 +19,7 @@ By default, the following data is encoded into JWT payloads:
   "email": "james@testingthings.com",
   "groups": ["User"],
   "schema": "User",
-  "admin": "0",
-  "accessToken": "bNaz3ocQDNk2TcRHdrs7f4zau0ndgGZe"
+  "admin": "0"
 }
 ```
 
@@ -73,7 +72,6 @@ The payload would now be as follows:
   "groups": ["User"],
   "schema": "User",
   "admin": "0",
-  "accessToken": "bNaz3ocQDNk2TcRHdrs7f4zau0ndgGZe",
   "username": "jamesedmonston"
 }
 ```
