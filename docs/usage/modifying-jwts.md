@@ -32,12 +32,12 @@ Here's an example module that adds the user's `username` into the payload:
 
 namespace modules;
 
-use craft\base\Plugin;
 use jamesedmonston\graphqlauthentication\events\JwtCreateEvent;
 use jamesedmonston\graphqlauthentication\services\TokenService;
+use yii\base\Module;
 use yii\base\Event;
 
-class ModifyJwt extends Plugin
+class ModifyJwt extends Module
 {
     public function init()
     {
@@ -89,13 +89,13 @@ Here's an example module that adds an `IssuedBy` validator:
 
 namespace modules;
 
-use craft\base\Plugin;
 use jamesedmonston\graphqlauthentication\events\JwtValidateEvent;
 use jamesedmonston\graphqlauthentication\services\TokenService;
 use Lcobucci\JWT\Validation\Constraint\IssuedBy;
+use yii\base\Module;
 use yii\base\Event;
 
-class ModifyJwt extends Plugin
+class ModifyJwt extends Module
 {
     public function init()
     {
@@ -115,5 +115,4 @@ class ModifyJwt extends Plugin
         $config->setValidationConstraints($validator);
     }
 }
-
 ```
