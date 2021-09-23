@@ -19,7 +19,7 @@ If you are using Apache to handle your network, make sure you've enabled `CGIPas
 
 ### Testing
 
-Craft's built-in GraphiQL doesn't allow sending custom headers, so a quick way of testing your authorization flow is to use https://graphiql-online.com.
+Craft's built-in GraphiQL doesn't allow you to send custom headers, so a quick way of testing your authorization flow is to use https://graphiql-online.com.
 
 :::note
 You'll need to add https://graphiql-online.com to your [`allowedGraphqlOrigins`](https://craftcms.com/docs/3.x/config/config-settings.html#allowedgraphqlorigins) setting in `general.php`.
