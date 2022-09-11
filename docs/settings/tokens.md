@@ -5,8 +5,6 @@ sidebar_label: Tokens
 slug: /settings/tokens
 ---
 
-![alt text](/assets/tokens.png "Screenshot of token settings")
-
 ## JWT Expiration
 
 The length of time before JWTs expire. Generally you should keep this short (< 30 minutes) and use the [`refreshToken`](/usage/authentication#refresh-jwt) mutation to get a new JWT.

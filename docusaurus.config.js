@@ -1,4 +1,11 @@
-module.exports = {
+// @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
+
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+
+/** @type {import('@docusaurus/types').Config} */
+const config = {
   title: "GraphQL Authentication",
   tagline: "GraphQL authentication for your headless Craft CMS applications.",
   url: "https://graphql-authentication.jamesedmonston.co.uk",
@@ -8,29 +15,15 @@ module.exports = {
   favicon: "assets/favicon.ico",
   organizationName: "jamesedmonston",
   projectName: "graphql-authentication-docs",
-  themeConfig: {
-    navbar: {
-      title: "GraphQL Authentication",
-      items: [
-        {
-          to: "/",
-          label: "Docs",
-        },
-        {
-          href: "https://github.com/jamesedmonston/graphql-authentication",
-          label: "GitHub",
-        },
-      ],
-    },
-    footer: {
-      style: "dark",
-      copyright: `Copyright &copy; ${new Date().getFullYear()} James Edmonston. Built with Docusaurus.`,
-    },
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
   },
   presets: [
     [
-      "@docusaurus/preset-classic",
-      {
+      "classic",
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
         docs: {
           sidebarPath: require.resolve("./sidebar.js"),
           editUrl:
@@ -40,7 +33,34 @@ module.exports = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
-      },
+      }),
     ],
   ],
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      navbar: {
+        title: "GraphQL Authentication",
+        items: [
+          {
+            to: "/",
+            label: "Docs",
+          },
+          {
+            href: "https://github.com/jamesedmonston/graphql-authentication",
+            label: "GitHub",
+          },
+        ],
+      },
+      footer: {
+        style: "dark",
+        copyright: `Copyright &copy; ${new Date().getFullYear()} James Edmonston. Built with Docusaurus.`,
+      },
+      prism: {
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
+      },
+    }),
 };
+
+module.exports = config;

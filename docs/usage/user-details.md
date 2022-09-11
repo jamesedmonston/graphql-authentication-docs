@@ -9,7 +9,7 @@ slug: /usage/user-details
 
 To get the authenticated user's data, you can call the `viewer` query:
 
-```javascript
+```graphql
 query Viewer {
   viewer {
     id
@@ -21,7 +21,7 @@ query Viewer {
 {
   "data": {
     "viewer": {
-      "id": "21",
+      "id": "1",
       "fullName": "James Edmonston"
     }
   }
@@ -32,7 +32,7 @@ query Viewer {
 
 To update the authenticated user, you can call the `updateViewer` mutation:
 
-```javascript
+```graphql
 mutation UpdateViewer {
   updateViewer (
     firstName: "Jerry"
@@ -61,7 +61,7 @@ mutation UpdateViewer {
 {
   "data": {
     "updateViewer": {
-      "id": "21",
+      "id": "1",
       "fullName": "Jerry Jackson",
       "customField": "A value",
       "photo": {
@@ -77,7 +77,7 @@ mutation UpdateViewer {
 
 To update the authenticated user's password, you can call the `updatePassword` mutation:
 
-```javascript
+```graphql
 mutation UpdatePassword {
   updatePassword(
     currentPassword: "testing123"

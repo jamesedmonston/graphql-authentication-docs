@@ -5,8 +5,6 @@ sidebar_label: Users
 slug: /settings/users
 ---
 
-![alt text](/assets/users.png "Screenshot of user settings")
-
 ## Permission Type
 
 Choose whether users get assigned to a single schema, or each user group gets its own schema.

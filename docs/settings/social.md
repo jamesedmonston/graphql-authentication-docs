@@ -5,8 +5,6 @@ sidebar_label: Social
 slug: /settings/social
 ---
 
-![alt text](/assets/social.png "Screenshot of social settings")
-
 ## Google
 
 ### Client ID

@@ -10,5 +10,3 @@ Choose which fields are forbidden from being accessed through queries and mutati
 - `Query & Mutate` (default) leaves fields unrestricted.
 - `Query` makes fields available only in queries and mutation responses.
 - `Private` stops fields from being queried and mutated.
-
-![alt text](/assets/fields.png "Screenshot of field settings")

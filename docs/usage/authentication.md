@@ -13,7 +13,7 @@ To log in to a user, you can call the `authenticate` mutation:
 Whilst the `refreshToken` is available in the mutation response, this is mainly intended for use in environments where cookies aren't available (i.e. mobile applications). An `HttpOnly` refresh token cookie is automatically sent with all authentication mutation responses.
 :::
 
-```javascript
+```graphql
 mutation Authenticate {
   authenticate(
     email: "james@testingthings.com"
@@ -39,7 +39,7 @@ mutation Authenticate {
       "refreshToken": "eu5l-FkvTaWEzIt38QFR8ETx5PIS706P",
       "refreshTokenExpiresAt": 1614998893,
       "user": {
-        "id": "21",
+        "id": "1",
         "fullName": "James Edmonston"
       }
     }
@@ -55,7 +55,7 @@ To register a user, you can call the `register` mutation:
 If you have `Permission Type` set to `Multiple Schemas` in your plugin settings, you will have a `register` mutation for each user group that has registrations enabled (e.g. `registerUser` and `registerBusiness`).
 :::
 
-```javascript
+```graphql
 mutation Register {
   register(
     email: "james@testingthings.com"
@@ -87,7 +87,7 @@ mutation Register {
       "refreshToken": "eu5l-FkvTaWEzIt38QFR8ETx5PIS706P",
       "refreshTokenExpiresAt": 1614998893,
       "user": {
-        "id": "21",
+        "id": "1",
         "fullName": "James Edmonston",
         "customField": "A value"
       }
@@ -108,7 +108,7 @@ Whilst this mutation accepts a `refreshToken` argument, browser requests will au
 Refresh tokens are consumed when generating a new JWT. A new refresh token is included in the mutation response, and also sent as an `HttpOnly` cookie.
 :::
 
-```javascript
+```graphql
 mutation RefreshToken {
   refreshToken(refreshToken: "Bc7xqt6ri5vFEzIEXRo-Z0CxgG0RqF_L") {
     jwt
@@ -131,12 +131,6 @@ mutation RefreshToken {
 }
 ```
 
-## Delete refresh tokens
-
-:::note
-As of version `1.9.0` the plugin no longer generates Craft GraphQL tokens, so the `deleteCurrentToken` and `deleteAllTokens` mutations were removed.
-:::
-
 ### Delete current refresh token
 
 To delete the current refresh token, you can call the `deleteRefreshToken` mutation:
@@ -145,7 +139,7 @@ To delete the current refresh token, you can call the `deleteRefreshToken` mutat
 Whilst this mutation accepts a `refreshToken` argument, browser requests will automatically use the refresh token cookie. The argument is mainly intended for use in mobile applications.
 :::
 
-```javascript
+```graphql
 mutation DeleteRefreshToken {
   deleteRefreshToken(refreshToken: "Bc7xqt6ri5vFEzIEXRo-Z0CxgG0RqF_L")
 }
@@ -162,7 +156,7 @@ mutation DeleteRefreshToken {
 
 To delete all refresh tokens associated with a user, you can call the `deleteRefreshTokens` mutation:
 
-```javascript
+```graphql
 mutation DeleteRefreshTokens {
   deleteRefreshTokens
 }
@@ -181,7 +175,7 @@ To activate a user following an activation email, you first need to grab the `co
 
 Once you've grabbed these, you can call the `activateUser` mutation:
 
-```javascript
+```graphql
 mutation ActivateUser {
   activateUser(
     code: "aY6MHG5NhKvA5tzrxKXuAvOLKca3fjJQ"
@@ -201,7 +195,7 @@ mutation ActivateUser {
 
 To resend an activation email to a user, you can call the `resendActivation` mutation:
 
-```javascript
+```graphql
 mutation ResendActivation {
   resendActivation(email: "james@testingthings.com")
 }
@@ -218,7 +212,7 @@ mutation ResendActivation {
 
 To send a password reset email to a user, you can call the `forgottenPassword` mutation:
 
-```javascript
+```graphql
 mutation ForgottenPassword {
   forgottenPassword(email: "james@testingthings.com")
 }
@@ -237,7 +231,7 @@ To set a user's password following a password reset email, you first need to gra
 
 Once you've grabbed these, you can call the `setPassword` mutation:
 
-```javascript
+```graphql
 mutation SetPassword {
   setPassword(
     password: "testing1234"

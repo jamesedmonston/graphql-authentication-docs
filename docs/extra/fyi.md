@@ -13,12 +13,12 @@ The inclusion of a section or volume argument means the query can be checked aga
 
 Take the following query for example:
 
-```javascript
+```graphql
 query Entries {
-    entries(limit: 5) {
-        id
-        title
-    }
+  entries(limit: 5) {
+    id
+    title
+  }
 }
 ```
 

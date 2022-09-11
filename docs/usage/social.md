@@ -17,7 +17,7 @@ The `googleSignIn` mutation both authenticates _and_ registers users. It will th
 If you have `Permission Type` set to `Multiple Schemas` in your plugin settings, you will have a `googleSignIn` mutation for each user group (e.g. `googleSignInUser` and `googleSignInBusiness`).
 :::
 
-```javascript
+```graphql
 mutation GoogleSignIn {
   googleSignIn(idToken: "...") {
     jwt
@@ -40,7 +40,7 @@ mutation GoogleSignIn {
       "refreshToken": "eu5l-FkvTaWEzIt38QFR8ETx5PIS706P",
       "refreshTokenExpiresAt": 1614998893,
       "user": {
-        "id": "21",
+        "id": "1",
         "fullName": "James Edmonston"
       }
     }
@@ -52,7 +52,7 @@ mutation GoogleSignIn {
 
 To authenticate a user through Facebook Login, you first need to call the `facebookOauthUrl` query:
 
-```javascript
+```graphql
 query FacebookOauthUrl {
   facebookOauthUrl
 }
@@ -77,7 +77,7 @@ The `facebookSignIn` mutation both authenticates _and_ registers users. It will 
 If you have `Permission Type` set to `Multiple Schemas` in your plugin settings, you will have a `facebookSignIn` mutation for each user group (e.g. `facebookSignInUser` and `facebookSignInBusiness`).
 :::
 
-```javascript
+```graphql
 mutation FacebookSignIn {
   facebookSignIn(code: "...") {
     jwt
@@ -100,7 +100,7 @@ mutation FacebookSignIn {
       "refreshToken": "eu5l-FkvTaWEzIt38QFR8ETx5PIS706P",
       "refreshTokenExpiresAt": 1614998893,
       "user": {
-        "id": "21",
+        "id": "1",
         "fullName": "James Edmonston"
       }
     }
@@ -112,7 +112,7 @@ mutation FacebookSignIn {
 
 To authenticate a user through Log in with Twitter, you first need to call the `twitterOauthUrl` query:
 
-```javascript
+```graphql
 query TwitterOauthUrl {
   twitterOauthUrl
 }
@@ -137,7 +137,7 @@ The `twitterSignIn` mutation both authenticates _and_ registers users. It will t
 If you have `Permission Type` set to `Multiple Schemas` in your plugin settings, you will have a `twitterSignIn` mutation for each user group (e.g. `twitterSignInUser` and `twitterSignInBusiness`).
 :::
 
-```javascript
+```graphql
 mutation TwitterSignIn {
   twitterSignIn(
     oauthToken: "..."
@@ -163,7 +163,7 @@ mutation TwitterSignIn {
       "refreshToken": "eu5l-FkvTaWEzIt38QFR8ETx5PIS706P",
       "refreshTokenExpiresAt": 1614998893,
       "user": {
-        "id": "21",
+        "id": "1",
         "fullName": "James Edmonston"
       }
     }
@@ -175,7 +175,7 @@ mutation TwitterSignIn {
 
 To authenticate a user through Sign in with Apple, you first need to call the `appleOauthUrl` query:
 
-```javascript
+```graphql
 query AppleOauthUrl {
   appleOauthUrl
 }
@@ -202,7 +202,7 @@ The `appleSignIn` mutation both authenticates _and_ registers users. It will thr
 If you have `Permission Type` set to `Multiple Schemas` in your plugin settings, you will have a `appleSignIn` mutation for each user group (e.g. `appleSignInUser` and `appleSignInBusiness`).
 :::
 
-```javascript
+```graphql
 mutation AppleSignIn {
   appleSignIn(
     code: "..."
@@ -228,7 +228,7 @@ mutation AppleSignIn {
       "refreshToken": "eu5l-FkvTaWEzIt38QFR8ETx5PIS706P",
       "refreshTokenExpiresAt": 1614998893,
       "user": {
-        "id": "21",
+        "id": "1",
         "fullName": "James Edmonston"
       }
     }
