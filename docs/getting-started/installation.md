@@ -22,3 +22,11 @@ To install the plugin, follow these instructions.
         composer require jamesedmonston/graphql-authentication
 
 3.  In the Control Panel, go to Settings → Plugins and click the “Install” button for GraphQL Authentication.
+
+## Reducing Installation Size
+
+To reduce the installation size of the required Google packages by around 46MB, follow these instructions.
+
+1.  Add `"pre-autoload-dump": "Google\\Task\\Composer::cleanup"` to your `composer.json`'s `scripts` block.
+
+2.  Add `"google/apiclient-services": ["Oauth2"]` to your `composer.json`'s `extra` block.
