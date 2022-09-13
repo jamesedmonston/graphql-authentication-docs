@@ -35,8 +35,7 @@ To update the authenticated user, you can call the `updateViewer` mutation:
 ```graphql
 mutation UpdateViewer {
   updateViewer (
-    firstName: "Jerry"
-    lastName: "Jackson"
+    fullName: "Jerry Jackson"
     customField: "A value"
     photo: {
       fileData: "base64..."

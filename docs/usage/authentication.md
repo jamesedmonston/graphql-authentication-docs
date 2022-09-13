@@ -60,8 +60,7 @@ mutation Register {
   register(
     email: "james@testingthings.com"
     password: "testing123"
-    firstName: "James"
-    lastName: "Edmonston"
+    fullName: "James Edmonston"
     customField: "A value"
   ) {
     jwt
