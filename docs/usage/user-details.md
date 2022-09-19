@@ -108,7 +108,7 @@ mutation DeleteAccount {
 // returns
 {
   "data": {
-    "setPassword": "Successfully deleted account"
+    "deleteAccount": "Successfully deleted account"
   }
 }
 ```
