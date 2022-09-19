@@ -92,3 +92,23 @@ mutation UpdatePassword {
   }
 }
 ```
+
+## Delete Account
+
+To delete the authenticated user's account, you can call the `deleteAccount` mutation:
+
+```graphql
+mutation DeleteAccount {
+  deleteAccount(
+    password: "testing1234"
+    confirmPassword: "testing1234"
+  )
+}
+
+// returns
+{
+  "data": {
+    "setPassword": "Successfully deleted account"
+  }
+}
+```

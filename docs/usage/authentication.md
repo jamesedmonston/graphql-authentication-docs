@@ -130,7 +130,7 @@ mutation RefreshToken {
 }
 ```
 
-### Delete current refresh token
+### Delete Current Refresh Token
 
 To delete the current refresh token, you can call the `deleteRefreshToken` mutation:
 
@@ -151,7 +151,7 @@ mutation DeleteRefreshToken {
 }
 ```
 
-### Delete all refresh tokens
+### Delete All Refresh Tokens
 
 To delete all refresh tokens associated with a user, you can call the `deleteRefreshTokens` mutation:
 
