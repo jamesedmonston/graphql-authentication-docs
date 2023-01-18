@@ -84,3 +84,27 @@ E.g. `eyJraWQiOiJRVzdaUjk3WDk1IiwiYWxnIjoiRVMyNTYifQ...`
 The URL to redirect to after authenticating.
 
 E.g. `https://yoursite.com/apple`
+
+## Facebook
+
+### App ID
+
+The App ID from your Microsoft app.
+
+E.g. `da6b1579-8398-4ad3-bded-9e6b0aea4988`
+
+### App Secret
+
+The App Secret from your Microsoft app.
+
+E.g. `OTW8Q~WCdBs1tKQ-s-Pq~1QopdY~ORTBlgh-da5m`
+
+### Redirect URL
+
+The URL to redirect to after authenticating.
+
+E.g. `https://yoursite.com/microsoft`
+
+### Allowed Email Domains
+
+The email domains from which you'd like to allow Microsoft Login. Comma-delimited. Leave blank to allow any domain.

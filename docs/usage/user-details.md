@@ -62,11 +62,11 @@ mutation UpdateViewer {
     "updateViewer": {
       "id": "1",
       "fullName": "Jerry Jackson",
-      "customField": "A value",
       "photo": {
         "id": "123",
         "url": "https://plugins.localhost/uploads/avatar.jpg"
-      }
+      },
+      "customField": "A value",
     }
   }
 }

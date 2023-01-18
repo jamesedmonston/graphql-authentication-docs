@@ -235,3 +235,47 @@ mutation AppleSignIn {
   }
 }
 ```
+
+## Microsoft
+
+To authenticate a user through Microsoft Login, you first need to call the `microsoftOauthUrl` query:
+
+```graphql
+query MicrosoftOauthUrl {
+  microsoftOauthUrl
+}
+
+// returns
+{
+  "data": {
+    "microsoftOauthUrl": "https://login.microsoftonline.com/common/oauth2/authorize..."
+  }
+}
+```
+
+Next, send the user to the generated URL and they will be asked to authenticate through Microsoft. Once they have authenticated, they will be redirected to your [Redirect URL](/settings/social#redirect-url-3) with a `code` query parameter (e.g. `https://yoursite.com/microsoft?code=...`).
+
+Finally, once you've grabbed `code` and `state` from the URL, you can call the `microsoftSignIn` mutation:
+
+:::note
+The `microsoftSignIn` mutation both authenticates _and_ registers users. It will throw a `Cannot find matching user` error if registration is disabled, and no user with that email exists.
+:::
+
+:::note
+If you have `Permission Type` set to `Multiple Schemas` in your plugin settings, you will have a `microsoftSignIn` mutation for each user group (e.g. `microsoftSignInUser` and `microsoftSignInBusiness`).
+:::
+
+```graphql
+mutation MicrosoftSignIn {
+  microsoftSignIn(code: "...", state: "...") {
+    jwt
+    jwtExpiresAt
+    refreshToken
+    refreshTokenExpiresAt
+    user {
+      id
+      fullName
+    }
+  }
+}
+```

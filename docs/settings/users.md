@@ -7,7 +7,11 @@ slug: /settings/users
 
 ## Permission Type
 
-Choose whether users get assigned to a single schema, or each user group gets its own schema.
+Choose whether to have one schema for all users, or a schema per user group.
+
+## Allow Magic Authentication
+
+Whether or not the `sendMagicLink` and `verifyMagicCode` mutations should be available.
 
 :::note
 If you choose `Multiple Schemas`, you will see the following fields **_for each user group_**.
@@ -15,7 +19,7 @@ If you choose `Multiple Schemas`, you will see the following fields **_for each 
 
 ## GraphQL Schema
 
-The schema that tokens will be assigned to through the [authentication mutations](/usage/authentication).
+The schema that JWTs will be assigned to through the [authentication mutations](/usage/authentication).
 
 ## Allow Registration
 
