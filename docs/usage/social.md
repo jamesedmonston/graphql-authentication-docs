@@ -278,4 +278,20 @@ mutation MicrosoftSignIn {
     }
   }
 }
+
+// returns
+{
+  "data": {
+    "microsoftSignIn": {
+      "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJDcmFmdENNUyIsImlhdCI6MTYwNzIyMjg5MywiZXhwIjoxNjA3MjI0NjkzLCJzdWIiOi...",
+      "jwtExpiresAt": 1607224693,
+      "refreshToken": "eu5l-FkvTaWEzIt38QFR8ETx5PIS706P",
+      "refreshTokenExpiresAt": 1614998893,
+      "user": {
+        "id": "1",
+        "fullName": "James Edmonston"
+      }
+    }
+  }
+}
 ```
