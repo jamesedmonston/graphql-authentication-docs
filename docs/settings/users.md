@@ -11,11 +11,15 @@ Choose whether to have one schema for all users, or a schema per user group.
 
 ## Allow Magic Authentication
 
-Whether or not the `sendMagicLink` and `verifyMagicCode` mutations should be available.
+Whether or not the Magic Code mutations should be available.
 
 :::note
 If you choose `Multiple Schemas`, you will see the following fields **_for each user group_**.
 :::
+
+## Allow Two-Factor Authentication
+
+Whether or not the Two-Factor mutations should be available.
 
 ## GraphQL Schema
 
