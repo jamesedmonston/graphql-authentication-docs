@@ -13,6 +13,7 @@ module.exports = {
     ],
     Usage: [
       "usage/authentication",
+      "usage/two-factor-authentication",
       "usage/magic-authentication",
       "usage/signing-requests",
       "usage/user-details",
