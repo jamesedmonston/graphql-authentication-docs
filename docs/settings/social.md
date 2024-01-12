@@ -85,7 +85,7 @@ The URL to redirect to after authenticating.
 
 E.g. `https://yoursite.com/apple`
 
-## Facebook
+## Microsoft
 
 ### App ID
 
