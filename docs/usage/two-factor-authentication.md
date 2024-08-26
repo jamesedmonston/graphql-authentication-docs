@@ -131,3 +131,23 @@ query TwoFactorEnabled {
   }
 }
 ```
+
+## Disable Two-Factor
+
+To disable Two-Factor on a user, you can call the `disableTwoFactor` mutation:
+
+```graphql
+mutation DisableTwoFactor {
+  disableTwoFactor(
+    password: "..."
+    confirmPassword: "..."
+  )
+}
+
+// returns
+{
+  "data": {
+    "disableTwoFactor": false
+  }
+}
+```
