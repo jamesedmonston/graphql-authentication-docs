@@ -23,6 +23,8 @@ To install the plugin, follow these instructions.
 
 3.  In the Control Panel, go to Settings → Plugins and click the “Install” button for GraphQL Authentication.
 
+4.  Go to GraphQL -> Schemas -> Public Schema -> Enable `Query for elements in the "{siteName}" site`.
+
 ## Reducing Installation Size
 
 To reduce the installation size of the required Google packages by around 46MB, follow these instructions.
