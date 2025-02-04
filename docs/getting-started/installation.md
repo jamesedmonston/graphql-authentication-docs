@@ -27,6 +27,8 @@ To install the plugin, follow these instructions.
 
 :::note
 Step 4 is imperative, else you'll run into a `Missing Authorization Header` warning, even when sending the `Authorization` header.
+
+This ensures the authentication mutations are available on the public schema – subsequent authenticated calls will then use a schema from the plugin settings.
 :::
 
 ## Reducing Installation Size
