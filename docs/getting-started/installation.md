@@ -25,6 +25,10 @@ To install the plugin, follow these instructions.
 
 4.  Go to GraphQL -> Schemas -> Public Schema -> Enable `Query for elements in the "{siteName}" site`.
 
+:::note
+Step 4 is imperative, else you'll run into a `Missing Authorization Header` warning, even when sending the `Authorization` header.
+:::
+
 ## Reducing Installation Size
 
 To reduce the installation size of the required Google packages by around 46MB, follow these instructions.
