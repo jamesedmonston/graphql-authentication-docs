@@ -45,6 +45,9 @@ const config = {
           },
         ],
       },
+      prism: {
+        additionalLanguages: ['php'],
+      }
     }),
 };
 
