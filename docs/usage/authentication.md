@@ -16,8 +16,8 @@ Whilst the `refreshToken` is available in the mutation response, this is mainly 
 ```graphql
 mutation Authenticate {
   authenticate(
-    email: "james@testingthings.com"
-    password: "testing123"
+    email: "james@example.com"
+    password: "example123"
   ) {
     jwt
     jwtExpiresAt
@@ -58,8 +58,8 @@ If you have `Permission Type` set to `Multiple Schemas` in your plugin settings,
 ```graphql
 mutation Register {
   register(
-    email: "james@testingthings.com"
-    password: "testing123"
+    email: "james@example.com"
+    password: "example123"
     fullName: "James Edmonston"
     customField: "A value"
   ) {
@@ -196,7 +196,7 @@ To resend an activation email to a user, you can call the `resendActivation` mut
 
 ```graphql
 mutation ResendActivation {
-  resendActivation(email: "james@testingthings.com")
+  resendActivation(email: "james@example.com")
 }
 
 // returns
@@ -213,7 +213,7 @@ To send a password reset email to a user, you can call the `forgottenPassword` m
 
 ```graphql
 mutation ForgottenPassword {
-  forgottenPassword(email: "james@testingthings.com")
+  forgottenPassword(email: "james@example.com")
 }
 
 // returns
@@ -233,7 +233,7 @@ Once you've grabbed these, you can call the `setPassword` mutation:
 ```graphql
 mutation SetPassword {
   setPassword(
-    password: "testing1234"
+    password: "example1234"
     code: "aY6MHG5NhKvA5tzrxKXuAvOLKca3fjJQ"
     id: "b50acbd9-c905-477a-a3f5-d0972a5a4356"
   )

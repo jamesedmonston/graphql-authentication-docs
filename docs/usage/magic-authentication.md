@@ -11,7 +11,7 @@ To authenticate a user through a 'magic link', you first need to call the `sendM
 
 ```graphql
 mutation SendMagicLink {
-  sendMagicLink(email: "james@testingthings.com")
+  sendMagicLink(email: "james@example.com")
 }
 
 // returns

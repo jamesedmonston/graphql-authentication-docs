@@ -79,9 +79,9 @@ To update the authenticated user's password, you can call the `updatePassword` m
 ```graphql
 mutation UpdatePassword {
   updatePassword(
-    currentPassword: "testing123"
-    newPassword: "testing1234"
-    confirmPassword: "testing1234"
+    currentPassword: "example123"
+    newPassword: "example1234"
+    confirmPassword: "example1234"
   )
 }
 
@@ -100,8 +100,8 @@ To delete the authenticated user's account, you can call the `deleteAccount` mut
 ```graphql
 mutation DeleteAccount {
   deleteAccount(
-    password: "testing1234"
-    confirmPassword: "testing1234"
+    password: "example1234"
+    confirmPassword: "example1234"
   )
 }
 

@@ -48,8 +48,8 @@ To enable Two-Factor _*and*_ authenticate a user that has already enabled Two-Fa
 ```graphql
 mutation VerifyTwoFactor {
   verifyTwoFactor(
-    email: "james@testingthings.com"
-    password: "testing123"
+    email: "james@example.com"
+    password: "example123"
     code: "123456"
   ) {
     jwt
@@ -85,8 +85,8 @@ If a user with Two-Factor enabled attempts to authenticate with the regular `aut
 ```graphql
 mutation Authenticate {
   authenticate(
-    email: "james@testingthings.com"
-    password: "testing123"
+    email: "james@example.com"
+    password: "example123"
   ) {
     jwt
     jwtExpiresAt

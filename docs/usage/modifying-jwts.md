@@ -16,7 +16,7 @@ By default, the following data is encoded into JWT payloads:
   "exp": 1607257726,
   "sub": "21",
   "fullName": "James Edmonston",
-  "email": "james@testingthings.com",
+  "email": "james@example.com",
   "groups": ["User"],
   "schema": "User",
   "admin": "0"
@@ -68,7 +68,7 @@ The payload would now be as follows:
   "exp": 1607257726,
   "sub": "21",
   "fullName": "James Edmonston",
-  "email": "james@testingthings.com",
+  "email": "james@example.com",
   "groups": ["User"],
   "schema": "User",
   "admin": "0",
