@@ -1,17 +1,13 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "GraphQL Authentication",
   tagline: "GraphQL authentication for your headless Craft CMS applications.",
+  projectName: "graphql-authentication-docs",
+  organizationName: "jamesedmonston",
   url: "https://graphql-authentication.jamesedmonston.co.uk",
+  favicon: "assets/favicon.ico",
   baseUrl: "/",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
-  favicon: "assets/favicon.ico",
-  organizationName: "jamesedmonston",
-  projectName: "graphql-authentication-docs",
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
