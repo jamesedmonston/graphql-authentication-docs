@@ -5,4 +5,4 @@ sidebar_label: Messages
 slug: /messages
 ---
 
-Here you can customize the response and error messages returned/thrown from queries and mutations.
+[![Message Settings](/assets/settings-messages.png)](/assets/settings-messages.png)
