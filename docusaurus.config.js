@@ -49,10 +49,6 @@ const config = {
           },
         ],
       },
-      footer: {
-        style: "dark",
-        copyright: `Copyright &copy; ${new Date().getFullYear()} James Edmonston. Built with Docusaurus.`,
-      },
     }),
 };
 
