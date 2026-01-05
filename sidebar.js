@@ -4,13 +4,6 @@ module.exports = {
       "getting-started/introduction",
       "getting-started/installation",
     ],
-    Settings: [
-      "settings/users",
-      "settings/tokens",
-      "settings/fields",
-      "settings/social",
-      "settings/messages",
-    ],
     Usage: [
       "usage/authentication",
       "usage/two-factor-authentication",
@@ -19,6 +12,13 @@ module.exports = {
       "usage/user-details",
       "usage/social",
       "usage/modifying-jwts",
+    ],
+    Settings: [
+      "settings/users",
+      "settings/tokens",
+      "settings/fields",
+      "settings/social",
+      "settings/messages",
     ],
     Extra: ["extra/fyi"],
   },
