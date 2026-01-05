@@ -5,8 +5,6 @@ sidebar_label: Two-Factor Authentication
 slug: /usage/two-factor-authentication
 ---
 
-Two-Factor Authentication requires the installation of the existing [Two-Factor Authentication](https://plugins.craftcms.com/two-factor-authentication?craft4) plugin.
-
 ## Generate Two-Factor QR Code
 
 To generate a QR Code for the authenticated user to scan, you can call the `generateTwoFactorQrCode` mutation:
